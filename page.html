@@ -75,56 +75,100 @@
 
 
 <body>
+    <h2 id="greet"></h2>
+    <script> 
+        if (localStorage.getItem("username") == Null) {
+            alert("you must be logged into use this page")
+        }
+        else {
+            document.getElementById("greet").innerHTML = localStorage.getItem("username");
+        }
+    </script>
 
-    <h1>Hello</h1>
+    <h1>Meters - Feet  Converter</h1>
     <div id="main_content">
-
-        <li class="selected" id="page1" onclick="change_tab(this.id);">Meters to Feet</li>
-        <li class="notselected" id="page2" onclick="change_tab(this.id);">Feet to Meters</li>
+        <div id="bruh">
+            <li class="selected" id="page1" onclick="change_tab(this.id);">Meters to Feet</li>
+            <li class="notselected" id="page2" onclick="change_tab(this.id);">Feet to Meters</li>
+        </div>
         
         <div class='hidden_desc' id="page1_desc">
             <h2>Meters to Feet</h2>
-            <form name="login">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" placeholder="username">
+            <form name="mtf">
+                <label for="meters">Meters</label>
+                <input type="text" id="meters" name="meters" placeholder="meters">
                 <br>
-            
-                <label for="password">Password</label>
-                <input type="text" id="password" name="password" placeholder="password">
               
-                <input type="submit" value="Submit" onClick="checkEmpty()">
+                <input type="submit" value="Convert" onClick="convertToFeet()">
+
+                <br><br><br>
+                <label for="feet">Feet</label>
               </form>
         </div>
        
         <div class='hidden_desc' id="page2_desc">
             <h2>Feet to Meters</h2>
-            <form name="login">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" placeholder="username">
+            <form name="ftm">
+                <label for="feet">Feet</label>
+                <input type="text" id="feet" name="feet" placeholder="feet">
                 <br>
             
-                <label for="password">Password</label>
-                <input type="text" id="password" name="password" placeholder="password">
-            
-                <input type="submit" value="Submit" onClick="checkEmpty()">
+                <input type="submit" value="Convert" onClick="convertToMeters()">
+
+                <br><br><br>
+                <label for="meters">Meters</label>
             </form>
         </div>
         
         <div id="page_content">
             <h2>Meters to Feet</h2>
-            <form name="login">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" placeholder="username">
+            <form name="mtfb">
+                <label for="meters">Meters</label>
+                <input type="text" id="metersb" name="meters" placeholder="meters">
                 <br>
             
-                <label for="password">Password</label>
-                <input type="text" id="password" name="password" placeholder="password">
-            
-                <input type="submit" value="Submit" onClick="checkEmpty()">
+                <input type="submit" value="Convert" onClick="convertToFeetb()">
+
+                <br><br><br>
+                <label for="feet">Feet</label>
             </form>
         </div>
         
-       </div>
+    </div>
+
+       <script>
+        function convertToFeetb() {
+            var meters = document.getElementById("metersb").value;
+            if (meters == "") {
+                alert("Invalid value!");
+            }
+            else {
+                var result = meters * 3.281;
+                alert(result);
+            }
+        }
+        function convertToFeet() {
+            var meters = document.getElementById("meters").value;
+            if (meters == "") {
+                alert("Invalid value!");
+            }
+            else {
+                var result = meters * 3.281;
+                alert(result);
+            }
+        }
+        function convertToMeters() {
+            var feet = document.getElementById("feet").value;
+
+            if (feet == "") {
+                alert("Invalid value!");
+            }
+            else {
+                var result = feet / 3.281;
+                alert(result);
+            }
+        }
+    </script>
 
 
 

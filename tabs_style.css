@@ -32,6 +32,12 @@ h1 p {
   font-weight: bold;
   cursor: pointer;
 }
+
+#bruh {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #main_content li.notselected {
   background-color: #e0e0e0;
   color: #292a0a;

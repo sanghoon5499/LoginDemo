@@ -79,11 +79,13 @@
     <script>
         function checkEmpty() {
             var usr = document.forms["login"]["username"].value;
-            var pss = document.forms["login"]["password"].value;
-            if (usr == "" || pss == "") {
+            var pwd = document.forms["login"]["password"].value;
+            if (usr == "" || pwd == "") {
                 alert("Invalid username/password!")
             }
             else {
+                localStorage.setItem("username", usr);
+                localStorage.setItem("password", pwd);
                 window.location.href="page.html";
             }
 
