@@ -14,6 +14,32 @@
     <style>
         body {font-family: "Roboto", sans-serif;}
 
+        input[type=text], select {
+            text-align: center;
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            width: 100%;
+            background-color: #fbac00;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #f59f00;
+        }
+
         div {
             margin-left: auto;
             margin-right: auto;
@@ -25,7 +51,6 @@
 
         h1 {
             text-align: center;
-
         }
 
         /* Style the tab */
@@ -64,10 +89,20 @@
             border: 1px solid #ccc;
             border-top: none;
         }
+
+        h3 {
+            text-align: center;
+        }
+
     </style>
 </head>
 
 <body>
+    <h3 id="user"> [name] </h3>
+
+    <script> 
+        
+    </script>
 
     <div class="tab">
         <button class="tablinks" onclick="openTab(event, 'page1')">Meters to Feet</button>
@@ -78,7 +113,7 @@
         <h2>Feet to Meters</h2>
         <form>
             <label for="feet">Feet</label>
-            <input type="number" id="feet">
+            <input type="text" id="feet">
             <br>
         </form>
         <input type="submit" value="Convert" onClick="convertToMeters()">
@@ -90,7 +125,7 @@
         <h2>Meters to Feet</h2>
         <form>
             <label for="meters">Meters</label>
-            <input type="number" id="meters">
+            <input type="text" id="meters">
             <br>
         </form>
         <input type="submit" value="Convert" onClick="convertToFeet()">
@@ -122,7 +157,7 @@
                 alert("Invalid value!");
             }
             else {
-                var result = feet / 3.281;
+                var result = (Math.round((feet / 3.281) * 100)) / 100
                 document.getElementById("meters_print").innerHTML = result;
             }
         }
@@ -135,7 +170,7 @@
                 alert("Invalid value!");
             }
             else {
-                var result = meters * 3.281;
+                var result = (Math.round((meters * 3.281) * 100)) / 100;
                 document.getElementById("feet_print").innerHTML = result;
             }
         }
