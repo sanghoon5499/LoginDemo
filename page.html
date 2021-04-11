@@ -91,7 +91,17 @@
             border-top: none;
         }
 
-        h3 {
+        .bruhh {
+            display: inline-block;
+            margin-left: 25%;
+        }
+
+        .bruhhh {
+            display: inline-block;
+            margin-left: 0px;
+        }
+
+        .bruh {
             text-align: center;
         }
 
@@ -99,7 +109,10 @@
 </head>
 
 <body>
-    <h3 id="user"> [name] </h3> <!--default value-->
+    <h4 class = "bruh">
+        <h3 class = "bruhh">Hello, </h3>
+        <h3 class = "bruhhh" id="user"> [name] </h3> <!--default value--> 
+    </h4>
 
     <script> 
         document.getElementById("user").innerHTML = localStorage.getItem("username");
