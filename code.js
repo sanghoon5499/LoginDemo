@@ -1,3 +1,21 @@
+function checkEmpty() {
+    var usr = document.forms["login"]["username"].value;
+    var pwd = document.forms["login"]["password"].value;
+    if (usr == "" || pwd == "") {
+        alert("Invalid username/password!")
+    }
+    else {
+        localStorage.setItem("username", usr);
+        localStorage.setItem("password", pwd);
+
+        localStorage.setItem("username", usr)
+
+        window.location.href = "page.html";
+    }
+}
+
+
+
 
 function openTab(evt, page) {
     var i, tabcontent, tablinks;
