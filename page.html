@@ -10,100 +10,11 @@
 
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"> 
+    <script src="code.js"></script> 
     
     <link rel="stylesheet" type="text/css" href="tabs_style.css">
     <style>
-        html {font-family: "Valera Round", sans-serif;}
 
-        input[type=text], select {
-            text-align: center;
-            width: 100%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            display: inline-block;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-
-        input[type=submit] {
-            width: 100%;
-            background-color: #fbac00;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        input[type=submit]:hover {
-            background-color: #f59f00;
-        }
-
-        div {
-            margin-left: auto;
-            margin-right: auto;
-            width: 50%;
-            border-radius: 5px;
-            background-color: #f2f2f2;
-            padding: 20px;
-        }
-
-        h1 {
-            text-align: center;
-        }
-
-        /* Style the tab */
-        .tab {
-            overflow: hidden;
-            border: 1px solid #ccc;
-            background-color: #f1f1f1;
-        }
-
-        /* Style the buttons inside the tab */
-        .tab button {
-            background-color: inherit;
-            float: left;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            padding: 14px 16px;
-            transition: 0.3s;
-            font-size: 17px;
-        }
-
-        /* Change background color of buttons on hover */
-        .tab button:hover {
-            background-color: #ddd;
-        }
-
-        /* Create an active/current tablink class */
-        .tab button.active {
-            background-color: #ccc;
-        }
-
-        /* Style the tab content */
-        .tabcontent {
-            display: none;
-            padding: 6px 12px;
-            border: 1px solid #ccc;
-            border-top: none;
-        }
-
-        .bruhh {
-            display: inline-block;
-            margin-left: 25%;
-        }
-
-        .bruhhh {
-            display: inline-block;
-            margin-left: 0px;
-        }
-
-        .bruh {
-            text-align: center;
-        }
 
     </style>
 </head>
@@ -146,55 +57,6 @@
         <h3>Feet:</h3>
         <h3 id="feet_print"></h3>
     </div>
-
-
-    <script>
-        function openTab(evt, page) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(page).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
-
-        function convertToMeters() {
-            event.preventDefault();
-            var feet = document.getElementById("feet").value;
-
-            if (feet == "") {
-                alert("Invalid value!");
-            }
-            else {
-                var result = (Math.round((feet / 3.281) * 100)) / 100
-                document.getElementById("meters_print").innerHTML = result;
-            }
-        }
-
-        function convertToFeet() {
-            event.preventDefault();
-            var meters = document.getElementById("meters").value;
-            console.log(meters)
-            if (meters == "") {
-                alert("Invalid value!");
-            }
-            else {
-                var result = (Math.round((meters * 3.281) * 100)) / 100;
-                document.getElementById("feet_print").innerHTML = result;
-            }
-        }
-
-        window.addEventListener('load', (event) => {
-            console.log('page is fully loaded');
-            openTab(event, 'page1')
-        });
-
-    </script>
 
 </body>
 
