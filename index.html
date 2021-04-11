@@ -26,9 +26,9 @@
         box-sizing: border-box;
     }
 
-    input[type=submit] {
+    input[type=button] {
         width: 100%;
-        background-color: #4CAF50;
+        background-color: #fbac00;
         color: white;
         padding: 14px 20px;
         margin: 8px 0;
@@ -38,7 +38,7 @@
     }
 
     input[type=submit]:hover {
-        background-color: #45a049;
+        background-color: #f59f00;
     }
 
     div {
@@ -56,9 +56,6 @@
     }
  </style>
 
-
-
-
 <body>
     <br><br><br><br><br>
 
@@ -73,7 +70,7 @@
       <label for="password">Password</label>
       <input type="text" id="password" name="password" placeholder="password">
     
-      <input type="submit" value="Submit" onClick="checkEmpty()">
+      <input type="button" value="Submit" onClick="checkEmpty()">
     </form>
 
     <script>
@@ -86,18 +83,13 @@
             else {
                 localStorage.setItem("username", usr);
                 localStorage.setItem("password", pwd);
-                window.location.href="page.html";
-            }
 
+                localStorage.setItem("username", usr)
+
+                window.location.href = "page.html";
+            }
         }
     </script>
-
   </div>
-
-
 </body>
-
-
-
-
 </html>
