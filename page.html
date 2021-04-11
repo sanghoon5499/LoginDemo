@@ -8,11 +8,12 @@
     <title>Full Stack Assignment</title>
 
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"> 
     
     <link rel="stylesheet" type="text/css" href="tabs_style.css">
     <style>
-        body {font-family: "Roboto", sans-serif;}
+        html {font-family: "Valera Round", sans-serif;}
 
         input[type=text], select {
             text-align: center;
@@ -98,11 +99,9 @@
 </head>
 
 <body>
-    <h3 id="user"> [name] </h3>
+    <h3 id="user"> [name] </h3> <!--default value-->
 
     <script> 
-        // var word = "hoy";
-        // localStorage.setItem("username", word);
         document.getElementById("user").innerHTML = localStorage.getItem("username");
     </script>
 
@@ -114,24 +113,24 @@
     <div id="page2" class="tabcontent">
         <h2>Feet to Meters</h2>
         <form>
-            <label for="feet">Feet</label>
+            <label for="feet">Feet:</label>
             <input type="text" id="feet">
             <br>
         </form>
         <input type="submit" value="Convert" onClick="convertToMeters()">
-        <h3>Meters</h3>
+        <h3>Meters:</h3>
         <h3 id="meters_print"></h3>
     </div>
 
     <div id="page1" class="tabcontent">
         <h2>Meters to Feet</h2>
         <form>
-            <label for="meters">Meters</label>
+            <label for="meters">Meters:</label>
             <input type="text" id="meters">
             <br>
         </form>
         <input type="submit" value="Convert" onClick="convertToFeet()">
-        <h3>Feet</h3>
+        <h3>Feet:</h3>
         <h3 id="feet_print"></h3>
     </div>
 
