@@ -1,66 +1,56 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Best Conversion Tool. Ever.</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Best Conversion Tool. Ever.</title>
 
+        <link rel="stylesheet" type="text/css" href="tabs_style.css">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"> 
+        <script src="code.js"></script> 
+    </head>
 
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"> 
-    <script src="code.js"></script> 
-    
-    <link rel="stylesheet" type="text/css" href="tabs_style.css">
-    <style>
+    <body>
+        <h4 class = "bruh">
+            <h3 class = "bruhh">Hello, </h3>
+            <h3 class = "bruhhh" id="user"> [name] </h3> <!--default value--> 
+        </h4>
 
+        <script> 
+            document.getElementById("user").innerHTML = localStorage.getItem("username");
+        </script>
 
-    </style>
-</head>
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'page1')">Meters to Feet</button>
+            <button class="tablinks" onclick="openTab(event, 'page2')">Feet to Meters</button>
+        </div>
 
-<body>
-    <h4 class = "bruh">
-        <h3 class = "bruhh">Hello, </h3>
-        <h3 class = "bruhhh" id="user"> [name] </h3> <!--default value--> 
-    </h4>
+        <div id="page1" class="tabcontent">
+            <h2>Meters to Feet</h2>
+            <form>
+                <label>Meters:</label>
+                <input type="text" autocomplete="off" id="meters" onkeyup="convertToFeet()">
+                <br>
+            </form>
+            
 
-    <script> 
-        document.getElementById("user").innerHTML = localStorage.getItem("username");
-    </script>
+            <h3>Feet:</h3>
+            <h3 id="feet_print"></h3>
+        </div>
+        
+        <div id="page2" class="tabcontent">
+            <h2>Feet to Meters</h2>
+            <form id="p2">
+                <label>Feet:</label>
+                <input type="text" autocomplete="off" id="feet" onkeyup="convertToMeters()">
+                <br>
+            </form>
 
-    <div class="tab">
-        <button class="tablinks" onclick="openTab(event, 'page1')">Meters to Feet</button>
-        <button class="tablinks" onclick="openTab(event, 'page2')">Feet to Meters</button>
-    </div>
-
-    <div id="page2" class="tabcontent">
-        <h2>Feet to Meters</h2>
-        <form id="p2">
-            <label for="feet">Feet:</label>
-            <input type="text" id="feet">
-            <br>
-        </form>
-
-        <input type="submit" value="Convert" onClick="convertToMeters()">
-
-
-        <h3>Meters:</h3>
-        <h3 id="meters_print"></h3>
-    </div>
-
-    <div id="page1" class="tabcontent">
-        <h2>Meters to Feet</h2>
-        <form>
-            <label for="meters">Meters:</label>
-            <input type="text" id="meters">
-            <br>
-        </form>
-        <input type="submit" value="Convert" onClick="convertToFeet()">
-        <h3>Feet:</h3>
-        <h3 id="feet_print"></h3>
-    </div>
-
-</body>
-
+            <h3>Meters:</h3>
+            <h2 id="meters_print"></h3>
+        </div>
+    </body>
 </html>

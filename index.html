@@ -6,13 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log in</title>
 
-
     <link rel="stylesheet" type="text/css" href="index_style.css">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"> 
     <script src="code.js"></script> 
-    
-
 </head>
 
 
@@ -24,13 +21,13 @@
     <div>
         <form name="login">
         <label for="username">Username</label>
-        <input type="text" id="username" name="username" placeholder="username">
+        <input type="text" autocomplete="off" id="username" name="username" placeholder="username">
         <br>
     
         <label for="password">Password</label>
         <input type="text" id="password" name="password" placeholder="password">
         
-        <input type="button" value="Submit" onClick="checkEmpty()">
+        <input type="button" autocomplete="off" value="Submit" onClick="checkEmpty()">
         </form>
 
         <br><br><br><br><br>
